@@ -2,6 +2,7 @@
 npm-debug.log
 node_modules/
 .meteor/dev_bundle
+package-lock.json
 public/locales/de_DE.json
 public/locales/ja_JP.json
 public/files
