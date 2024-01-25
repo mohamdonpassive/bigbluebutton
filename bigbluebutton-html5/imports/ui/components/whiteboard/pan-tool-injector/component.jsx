@@ -56,11 +56,11 @@ class PanToolInjector extends React.Component {
     const tools = document.querySelectorAll('[id*="TD-PrimaryTools-"]');
     tools.forEach((tool) => {
       const { classList } = tool.firstElementChild;
-      if (panSelected) {
-        classList.add('overrideSelect');
-      } else {
-        classList.remove('overrideSelect');
-      }
+      // if (panSelected) {
+      //   classList.add('overrideSelect');
+      // } else {
+      //   classList.remove('overrideSelect');
+      // }
     });
 
     const parentElement = document.getElementById('TD-PrimaryTools');

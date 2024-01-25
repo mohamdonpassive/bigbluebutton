@@ -25,7 +25,7 @@ const SMALLEST_DOCK_HEIGHT = 475;
 const SMALL_WIDTH = 800;
 const SMALLEST_DOCK_WIDTH = 710;
 const TOOLBAR_SMALL = 28;
-const TOOLBAR_LARGE = 32;
+const TOOLBAR_LARGE = 38;
 const MOUNTED_RESIZE_DELAY = 1500;
 
 export default function Whiteboard(props) {
@@ -653,6 +653,7 @@ export default function Whiteboard(props) {
     if (menu) {
       menu.style.position = 'relative';
       menu.style.height = presentationMenuHeight;
+      // menu.style.right = "3%";
       menu.setAttribute('id', 'TD-Styles-Parent');
 
       [...menu.children]

@@ -33,21 +33,45 @@ const TldrawGlobalStyle = createGlobalStyle`
   }
   [class$="-side-right"] {
     top: -1px;
+    left:0 !important
   }
   ${({ hasWBAccess, isPresenter, size }) => (hasWBAccess || isPresenter) && `
     #TD-Tools-Dots {
       height: ${size}px;
       width: ${size}px;
     }
+    #TD-Tools-Dots div{
+      background-color:#113060;
+      color:white;
+    }
     #TD-Delete {
       & button {
         height: ${size}px;
         width: ${size}px;
       }
+      & div{
+        background-color:#c52a2a;
+        color:white;
+        font-size:2 rem;
+        & svg{
+          width: 22px;
+          height : 20px;
+        }
+      }
+    }
+    #TD-PrimaryTools {
+      background-color:#113060;
     }
     #TD-PrimaryTools button {
         height: ${size}px;
         width: ${size}px;
+        background-color:#113060 !important;
+        margin: 5px;
+        border:none !important;
+    }
+    #TD-PrimaryTools button div, i.icon-bbb-hand{
+      background:transparent;
+      color:white;
     }
     #TD-Styles {
       border-width: ${borderSize};
