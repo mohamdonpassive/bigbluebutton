@@ -9,6 +9,7 @@ import WaitingUsersService from '/imports/ui/components/waiting-users/service';
 
 const UserContentContainer = (props) => {
   const usingUsersContext = useContext(UsersContext);
+  console.log('usingUsersContext ====> ', usingUsersContext);
   const { users } = usingUsersContext;
   const currentUser = {
     userId: Auth.userID,
