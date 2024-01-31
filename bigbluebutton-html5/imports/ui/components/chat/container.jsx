@@ -89,7 +89,10 @@ const ChatContainer = (props) => {
   }, []);
 
   const modOnlyMessage = Storage.getItem('ModeratorOnlyMessage');
-  const { welcomeProp } = ChatService.getWelcomeProp();
+  // const { welcomeProp } = ChatService.getWelcomeProp();
+
+  const meetingTitle = ChatService.getMeetingTitle(Auth.meetingID);
+  const welcomeMsg = `Welcome To ${meetingTitle}`
 
   ChatLogger.debug('ChatContainer::render::props', props);
 
@@ -98,7 +101,7 @@ const ChatContainer = (props) => {
       id: sysMessagesIds.welcomeId,
       content: [{
         id: sysMessagesIds.welcomeId,
-        text: welcomeProp.welcomeMsg,
+        text: welcomeMsg,
         time: loginTime,
       }],
       key: sysMessagesIds.welcomeId,

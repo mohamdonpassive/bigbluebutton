@@ -357,7 +357,17 @@ const getExportedPresentationString = (fileURI, filename, intl, fileStateType) =
   return `${name}</br>${link}`;
 };
 
+const getMeetingDetails = (meetingId) => Meetings.findOne({meetingId});
+
+const getMeetingTitle = (meetingId) =>{
+  const meeting = getMeetingDetails(meetingId);
+  if(meeting) return meeting.meetingProp.name;
+  return null;
+}
+
 export default {
+  getMeetingDetails,
+  getMeetingTitle,
   setUserSentMessage,
   mapGroupMessage,
   reduceAndMapGroupMessages,
