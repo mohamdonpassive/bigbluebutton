@@ -40,39 +40,40 @@ const TldrawGlobalStyle = createGlobalStyle`
       height: ${size}px;
       width: ${size}px;
     }
-    #TD-Tools-Dots div{
-      background-color:#113060;
-      color:white;
-    }
+    // #TD-Tools-Dots div{
+    //   background-color:#113060;
+    //   color:white;
+    // }
     #TD-Delete {
       & button {
         height: ${size}px;
         width: ${size}px;
+        background-color:white;
+        border-radius:50%
       }
       & div{
-        background-color:#c52a2a;
-        color:white;
-        font-size:2 rem;
-        & svg{
-          width: 22px;
-          height : 20px;
-        }
+      font-size:2 rem;
+      & svg{
+        width: 22px;
+        height : 20px;
+        color:red;
+      }
       }
     }
-    #TD-PrimaryTools {
-      background-color:#113060;
-    }
+    // #TD-PrimaryTools {
+    //   background-color:#113060;
+    // }
     #TD-PrimaryTools button {
         height: ${size}px;
         width: ${size}px;
-        background-color:#113060 !important;
-        margin: 5px;
-        border:none !important;
+        // background-color:#113060 !important;
+        // margin: 5px;
+        // border:none !important;
     }
-    #TD-PrimaryTools button div, i.icon-bbb-hand{
-      background:transparent;
-      color:white;
-    }
+    // #TD-PrimaryTools button div, i.icon-bbb-hand{
+    //   background:transparent;
+    //   color:white;
+    // }
     #TD-Styles {
       border-width: ${borderSize};
     }
